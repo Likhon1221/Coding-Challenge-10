@@ -33,3 +33,19 @@ sizeSelector.addEventListener('change', function(event) {
     }
     }
 );
+
+// Task 4. Create a Checkout Event 
+
+purchaseButton.addEventListener('click', function() {
+    let selectedSize = sizeSelector.value;  
+    let selectedStock = stock[selectedSize];  
+
+    if (selectedStock.available > 0) {
+        // Shows a message of Purchased
+        alert(`Purchased ${selectedSize} for $${selectedStock.price}.`);
+    } else {
+        // Shows a message of out of stock
+        alert(`Sorry, ${selectedSize} is out of stock.`);
+    }
+    }
+);
